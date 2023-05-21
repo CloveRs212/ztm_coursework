@@ -1,10 +1,13 @@
 import { useState } from "react";
+
 import FormInput from "../form-input/form-input.components";
 import Button from "../button/button.component";
+
 import {
-  signInWithGoogleRedirect,
+  signInWithGooglePopup,
   signInAuthUserWithEmailAndPassword,
 } from "../../utils/firebase.utils";
+
 import "./sign-in-form.styles.scss";
 
 const defaultFormFields = {
@@ -21,7 +24,7 @@ const SignInForm = () => {
   };
 
   const signInWithGoogle = async () => {
-    await signInWithGoogleRedirect();
+    await signInWithGooglePopup();
   };
 
   const handleSubmit = async (event) => {
@@ -74,7 +77,7 @@ const SignInForm = () => {
         <div className="buttons-container">
           <Button type="submit">Sign In</Button>
           <Button type="button" buttonType="google" onClick={signInWithGoogle}>
-            Sign Into Google
+            Sign In With Google
           </Button>
         </div>
       </form>
