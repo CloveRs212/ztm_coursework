@@ -4,8 +4,8 @@ import { ReactComponent as ShoppingSvg } from '../../assests/shopping-bag.svg';
 
 
 export const CartIconContainer = styled.div`
-  width: 45px;
-  height: 45px;
+  width: 30px;
+  height: 30px;
   position: relative;
   display: flex;
   align-items: center;
